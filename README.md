@@ -48,7 +48,8 @@ python banking.py
 
 ## 👤 Author
 
-**Muzammil Tahir**
+Muzammil Tahir 
+
 
 🔗 LinkedIn: [www.linkedin.com/in/muzammil-tahir-114b862a5]
 
