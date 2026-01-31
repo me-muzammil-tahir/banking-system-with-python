@@ -53,9 +53,13 @@ def loginAccount():
                 bankMenu(account_no)
                 break
             else:
+                print("Processing...")
+                time.sleep(3)
                 print("Incorrect password\n")
                 continue
         else:
+            print("Processing...")
+            time.sleep(3)
             print("Account not Found...!")
     clear_screen()
         
@@ -67,7 +71,7 @@ def depositeMoney(acc_no):
     amount = int(input("Amount: "))
     
     accounts[acc_no]["balence"] += amount
-    print("{} Amount Deposite Successfully".format(amount))
+    print("{} RS Deposite Successfully".format(amount))
     print(f"New Account Balance is : {accounts[acc_no]['balence']}")
     
     
@@ -78,14 +82,14 @@ def withdrawMoney(acc_no):
     if amount <= accounts[acc_no]['balence']: 
         accounts[acc_no]['balence'] -= amount
         print("Get your cash____")
-        print("You have successfully withdraw {} Amount".format(amount))
+        print("You have successfully withdraw {} RS".format(amount))
         print(f"Remaining Balence is {accounts[acc_no]['balence']}")
     else:
-        print("Insufficient Balance, you only have ", accounts[acc_no]['balence'], " Balance...")
+        print("Insufficient Balance, you only have ", accounts[acc_no]['balence'], " RS...")
         
     
 def checkBalence(acc_no):
-    print(f"{accounts[acc_no]['name']}! You have {accounts[acc_no]['balence']} balence")
+    print(f"{accounts[acc_no]['name']}! You have {accounts[acc_no]['balence']} RS")
     
 
 def details(acc_no):
@@ -95,7 +99,7 @@ def details(acc_no):
     print(f"Name: {accounts[acc_no]['name']}")
     print(f"Email: {accounts[acc_no]['email']}")
     print(f"Contact: {accounts[acc_no]['contact']}")
-    print(f"Balence: {accounts[acc_no]['balence']}\n")
+    print(f"Balence: {accounts[acc_no]['balence']} RS\n")
     
     
     
