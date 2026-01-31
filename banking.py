@@ -70,10 +70,12 @@ def depositeMoney(acc_no):
     clear_screen()
     amount = int(input("Amount: "))
     
-    accounts[acc_no]["balence"] += amount
-    print("{} RS Deposite Successfully".format(amount))
-    print(f"New Account Balance is : {accounts[acc_no]['balence']}")
-    
+    if amount > 0:
+        accounts[acc_no]["balence"] += amount
+        print("{} RS Deposite Successfully".format(amount))
+        print(f"New Account Balance is : {accounts[acc_no]['balence']}")
+    else:
+        print(f"{amount} RS can't be Deposite...")
     
 def withdrawMoney(acc_no):
     clear_screen()
